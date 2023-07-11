@@ -5,8 +5,8 @@
     font-family: 'Poppins', sans-serif;
 }
 section.hero {
-    background-image: url(./img/hero-img.jpg);
-    height: 100vh;
+    background-image: url(./img/hero.jpg);
+    height: 600px;
     width: 100%;
     margin: auto;
     background-size: cover;
@@ -35,19 +35,29 @@ section.hero h1 {
     font-size: 30px;
     text-transform: uppercase;
 }
-a {
+.btn {
     background: blue;
     color: #fff;
-    padding: 7px 30px;
-    margin: 10px;
+    padding: 10px 30px;
+    margin: 20px 10px;
     text-transform: capitalize;
     text-decoration: none;
     display: inline-block;
     border-radius: 5px;
-    transition: all .5s ease-out;
+    transition: all .2s ease-out;
 }
-a:hover{
+.btn:hover{
     background: #f6ae05;
+}
+.btn::after {
+    content: "\f061";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-left: 5px;
+}
+input.btn {
+    width: 150px;
+    margin: 10px 0;
 }
 section{
     display: flex;
@@ -58,8 +68,84 @@ section{
 .left, .right {
     width: 50%;
 }
-
-.secontsection img {
-    width: 76%;
-
+.about img,.contact img {
+    width: 90%;
+}
+.about li {
+    list-style: none;
+    position: relative;
+}
+.about li::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    left: -20px;
+    top: 7px;
+}
+section.contact {
+    width: 100%;
+    background-color: #FFEBEC;
+}
+section.contact .right {
+    text-align: right;
+}
+form input {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    background: #f7dddf;
+    outline: none !important;
+    border: none;
+    border-radius: 5px;
+}
+.contact-wrepper {
+    display: flex;
+    width: 1160px;
+    padding: 50px 0;
+}
+.services-wrapper {
+    text-align: center;
+    max-width: 1160px;
+}
+.services-item-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+.services-item {
+    box-shadow: 0 0 0 0.1px;
+    padding: 20px;
+    border-radius: 5px;
+}
+.services-item img {
+    width: 350px;
+    height: 200px;
+}
+.philosophy .left, .philosophy .right {
+    width: 100%;
+}
+.top, .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    margin: 10px 0;
+}
+footer {
+    background: antiquewhite;
+    padding: 50px;
+    text-align: center;
+}
+.fa-brands, .fab {
+    font-family: "Font Awesome 6 Brands";
+    font-size: 30px;
+}
+.social {
+    margin-top: 20px;
 }
